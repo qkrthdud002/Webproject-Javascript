@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="registerForm" onsubmit="return check()">
+        <input type="text" name="name" id="name">
+        <input type="text" name="phone" id="phone">
+        <input type="submit" value="확인">
+    </form>
+    <script>
+        function check(){
+            // id로 찾기
+            const elementsName = document.getElementById('name');
+            // name 으로 찾기. name은 중복 가능하므로 배열이 반환된다.
+            const elementPhone = document.getElementsByName('phone');
+            if(elementsName.vlaue.length==0){
+                alert('이름을 입력하세요');
+                return false;
+            }
+            if(elementPhone[0].value.length==0){
+                alert('전화번호를 입력하세요');
+                return false;
+            }
+            return true;
+
+            // 글자 수 확인 => input.value.length
+            if(document.registerForm.name.value.length==0){
+                alert('이름을 입력하세요');
+                // form 전송이 취소된다.
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

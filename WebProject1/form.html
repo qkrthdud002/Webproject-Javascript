@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="registerForm">
+        <input type="text" name="name">
+        <input type="text" name="phone">
+    </form>
+    <script>
+        // forms 배열을 이용한 접근
+        document.forms[0].elements[0].value="user";
+        // name 속성을 이용한 접근
+        document.registerForm.phone.value="010";
+
+        // id로 찾기
+        const elementsName = document.getElementById('name');
+        // name 으로 찾기. name은 중복 가능하므로 배열이 반환된다.
+        const elementPhone = document.getElementByName('phone');
+    </script>
+</body>
+</html>

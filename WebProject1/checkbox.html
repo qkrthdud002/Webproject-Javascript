@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return check()">
+        <input type="radio" name="dessert" value="fruit">과일
+        <input type="radio" name="dessert" value="coffee">커피
+        <input type="radio" name="dessert" value="tea">녹차
+        <input type="radio" name="dessert" value="icecream">아이스크림
+        <input type="submit" value="선택">
+    </form>
+    <script>
+        function check(){
+            // 모든 항목의 true/false 확인
+            const query = 'input[type="checkbox"]';
+            const checks = document.querySelectorAll(query);
+            checks.forEach((i)=>{
+                console.log(`All: ${i.value} - ${i.checked}`);
+            });
+
+            // 체크 된 항목만 검색
+            const query2 = 'input[type="checkbox"] : checked';
+            const trueChecked = document.querySelectorAll(query2);
+            truechecked.forEach((i)=>{
+                console.log(`Checked: ${i.value} - ${i.checked}`);
+            });
+
+            // 특정 이름의 체크 된 항목만 검색
+            const query3 = 'input[name="fav"] : checked';
+            const favChecked = document.querySelectorAll(query3);
+            favChecked.forEach((i)=>{
+                console.log(`FAV Checked : ${i.value} - ${i.checked}`);
+            });
+            return false; // console 메시지를 보기위해 false 함
+        }
+    </script>
+</body>
+</html>
