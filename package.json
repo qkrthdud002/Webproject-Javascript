@@ -1,0 +1,23 @@
+{
+  "name": "webproject2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node indexnpm.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qkrthdud002/Webproject-Javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qkrthdud002/Webproject-Javascript/issues"
+  },
+  "homepage": "https://github.com/qkrthdud002/Webproject-Javascript#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
