@@ -1,0 +1,57 @@
+<form>
+    <input id="message" name="message" type="text" size="12" onBlur="validate_Length(1,32,this,document.getElementById('message_help'));" />
+    <message_help" class="help"></span>
+    <input id="ZipCode" name="phone" type="text" size="5" onBlur="validate_ZipCode(this,document.getElementById('ZipCode_help'));" />
+    <span id="ZipCode_help" class="help"></span>
+    <input type="button" value="Order Banner" onClick="placeOrder(this.form);"/>
+    </form>
+    <script language="javascript" type="text/javascript">
+    //      
+    function validate_Length(minLegth,maxlength,inputFiled,helpText)
+    {
+    if(inputFiled.value.length<minLegth||inputFiled.value.length>maxlength)
+    {
+    if(helpText!=null)
+    {
+    helpText.innerHTML="      "+minLenght+" "+maxLength+"   ";
+    return false;
+    }
+    }
+    else if(helpText!=null)
+    {
+    helpText.innerHTML=""
+    return true;
+    }
+    }
+    //      
+    function validate_ZipCode(inputFiled,helpText)
+    {
+    if(inputFiled.value.length!=5)
+    {
+    if(helpText!=null)
+    helpText.innerHTML="         5 ";
+    return false;
+    }
+    else if(isNaN(inputFiled.value))
+    {
+    if(helpText!=null)
+    helpText.innerHTML="         ";
+    return false;
+    }
+    else if(helpText!=null)
+    {
+    helpText.innerHTML=""
+    return true;
+    }
+    }
+    function placeOrder(form)
+    {
+    if(validateNonEmpty(1,32,form["phone"],form["phone_help"])&&validate_ZipCode(form["ZipCode"],form["ZipCode_help"]))
+    {
+    form.submit();
+    }
+    else{
+    alert("                ");
+    }
+    }
+    </script>
