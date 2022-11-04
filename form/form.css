@@ -1,0 +1,49 @@
+h1 {
+    /* border-bottom: 3px solid #000; */
+    text-align: center;
+}
+
+body {
+    height: 1260px;
+    /* width: 100%; */
+    margin: 0;
+}
+
+div {
+    margin: auto;
+    justify-content: center;
+    width: 22%;
+    margin-left: 650px;
+}
+
+th {
+    margin-bottom: 10px;
+}
+
+th, tr, td {
+    border: 1px solid black;
+}
+
+.classification {
+    margin-bottom: 15px;
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand { 
+	display: none;
+}
+
+select:focus{
+    outline: none;
+}
+
+#mutual, #username, #number, #phoneNumber, #id, #password, #password2 {
+    /* width: 97%; */
+    display: flex;
+    width: 150%;
+    height: 30px;
+    margin-bottom: 15px;
+}
