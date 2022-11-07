@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <title>거래처 등록</title>
+</head>
+<body>
+    <div id="inputBox">
+        <h1>거래처 등록</h1>
+        <p>상호</p>
+        <input class="input" type="text"/>
+
+        <p>대표자</p>
+        <input class="name" type="text"/>
+
+        <p>사업자등록번호</p>
+        <input class="companyNumber" type="number"/>
+
+        <p>대표전화</p>
+        <input class="representativeNumber" type="number"/>
+
+        <p>거래처ID</p>
+        <input class="id" type="text"/>
+
+        <p>비밀번호</p>
+        <input class="input" type="password"/>
+
+        <p>비밀번호 확인</p>
+        <input id="ck" type="password"/>
+        <input type="submit" value="확인" id="ckbt"/>
+
+        <p>분류</p>
+        <select id="enterprise">
+            <optgroup class="text" label="기업분류" ></optgroup>
+            <option value="대기업" selected="selected">대기업</option>
+            <option value="중소기업">중소기업</option>
+            <option value="소상공인">소상공인</option>
+        </select>
+
+        <p>개인정보 동의</p>
+        <div id="infoCkBox">
+            <label><input type="radio" name="ck_info" value="agree" checked="checked"/>동의</label>
+            <label><input type="radio" name="ck_info" value="disagree"/>비동의</label>
+        </div>
+
+        <p>처리방법</p>
+        <div id="method">
+            <label><input type="radio" name="ck_method" value="instant" checked="checked"/>즉시등록</label>
+            <label><input type="radio" name="ck_method" value="temporary"/>임시저장</label>
+        </div>
+
+        <input type="button" value="가입" id="signin"/>
+    </div>
+</body>
+</html>

@@ -11,53 +11,58 @@
     <form onsubmit="return check()">
       <!-- <table> -->
         <h1>거래처 등록</h1>
-
         <div>
           <tr>
-              <th>상호</th> <td><input type="text" id="mutual" placeholder="상호명을 입력하세요."></td>
+            <th class="a1 a10">상호</th> <td><input type="text" id="mutual" placeholder="상호명을 입력하세요."></td>
           </tr>
         </div>
 
         <div>
           <tr>
-              <th>대표자</th> <td><input type="text" id="username" placeholder="대표자명을 입력하세요."></td>
+              <th class="a2 a10">대표자</th> <td><input type="text" id="username" placeholder="대표자명을 입력하세요."></td>
           </tr>
         </div>
 
         <div>
           <tr>
-              <th>사업자 등록 번호</th>
+              <th class="a3 a10">사업자 등록 번호</th>
               <td><input type="text" id="number" maxlength="10" placeholder="사업자 등록 번호를 입력하세요."></td>
           </tr>
         </div>
 
         <div>
           <tr>
-              <th>대표전화</th> <td><input type="text" id="phoneNumber" placeholder="대표전화를 입력하세요."></td>
+              <th class="a4 a10">대표전화</th> <td><input type="text" id="phoneNumber" placeholder="대표전화를 입력하세요."></td>
           </tr>
         </div>
 
         <div>
           <tr>
-              <th>거래처 ID</th> <td><input type="text" id="id" placeholder="거래처 ID를 입력하세요."></td>
+              <th class="a5 a10">거래처 ID</th> <td><input type="text" id="id" placeholder="거래처 ID를 입력하세요."></td>
           </tr>
         </div>
 
         <div>
           <tr>
-              <th>비밀번호(최소6자)</th> <td><input type="password" id="password" placeholder="비밀번호를 입력하세요."></td>
+              <th class="a6 a10">비밀번호(최소6자)</th> <td><input type="password" id="password" placeholder="비밀번호를 입력하세요."></td>
           </tr>
         </div>
 
         <div>
           <tr>
-              <th>비밀번호 확인</th> <td><input type="password" id="password2" placeholder="비밀번호 확인"></td>
+              <th class="a7 a10">비밀번호 확인</th> <td><input type="password" id="password2" placeholder="비밀번호 확인"></td>
+          </tr>
+        </div>
+
+        <div>
+          <tr>
+            <th class="a10">기타</th> <td><input type="text" id="etc" placeholder="기타 (필수 작성은 아닙니다.)"></td>
           </tr>
         </div>
 
         <div class="classification">
           <tr>
-              <td>분류</td>
+              <td class="a8 a10">분류</td>
               <td>
                 <select name="division">
                   <option>대기업</option>
@@ -70,27 +75,37 @@
 
         <div>
           <tr>
-              <td>개인 정보 동의</td>
+              <td class="a9 a10">개인 정보 동의</td>
               <td>
-                <input type="radio" name="personal" value="yes">동의함
-                <input type="radio" name="personal" value="no">동의안함
+                <input type="radio" class="radio" name="personal" value="yes">동의함
+                <input type="radio"class="radio" name="personal" value="no">동의안함
               </td>
           </tr>
         </div>
 
         <div>
           <!-- <tr> -->
-              <td>처리 방법</td>
+              <td class="a10">처리 방법</td>
               <td>
-                  <input type="radio" name="register" value="submit">즉시등록
-                  <input type="radio" name="register" value="submit2">임시저장
+                  <input class="radio" type="radio" name="register" value="submit">즉시등록
+                  <input class="radio" type="radio" name="register" value="submit2">임시저장
               </td>
           <!-- </tr> -->
         </div>
 
+        <div class="date">
+              <!-- <th>년</th>
+              <th>월</th>
+              <th>일</th> -->   
+              <input id="year" type="text" placeholder="년">
+              <input id="month" type="text" placeholder="월">
+              <input id="day" type="text" placeholder="일">
+        </div>
+
+
         <div>
           <tr>
-            <td colspan="2"><input type="submit" value="확인"></td>
+            <td colspan="2"><input class="btn" type="submit" value="확인"></td>
           </tr>
         </div>
       <!-- </table> -->

@@ -1,4 +1,7 @@
 function check(e) {
+    const year = document.getElementById('year');
+    const month = document.getElementById('month');
+    const day = document.getElementById('day');
     const mutual = document.getElementById('mutual');
     const username = document.getElementById('username');
     const number = document.getElementById('number');
@@ -6,6 +9,7 @@ function check(e) {
     const id = document.getElementById('id');
     const password = document.getElementById('password');
     const password2 = document.getElementById('password2');
+    const etc = document.getElementById('etc');
 
     if(mutual.value.length == 0) {
         alert("상호명을 입력하세요.");
@@ -33,6 +37,18 @@ function check(e) {
     }
     if(password2.value != password.value) {
         alert("비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
+        return false;
+    }
+    if(year.value.length == 0) {
+        alert("년을 입력해주세요.");
+        return false;
+    }
+    if(month.value.length == 0) {
+        alert("월을 입력해주세요.");
+        return false;
+    }
+    if(day.value.length == 0) {
+        alert("일을 입력해주세요.");
         return false;
     }
 

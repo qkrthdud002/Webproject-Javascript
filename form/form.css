@@ -14,14 +14,8 @@ div {
     justify-content: center;
     width: 22%;
     margin-left: 650px;
-}
-
-th {
-    margin-bottom: 10px;
-}
-
-th, tr, td {
-    border: 1px solid black;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .classification {
@@ -40,14 +34,72 @@ select:focus{
     outline: none;
 }
 
-#mutual, #username, #number, #phoneNumber, #id, #password, #password2 {
+#mutual, #username, #number, #phoneNumber, #id, #password, #password2, #etc {
     /* width: 97%; */
     display: flex;
     width: 150%;
-    height: 30px;
+    height: 40px;
     margin-bottom: 15px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+#year {
+    margin-right: 12px;
+}
+
+#year, #month {
+    float: left;
+    display: flex;
+    width: 29%;
+    height: 40px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    /* padding: 5px; */
+}
+
+#day {
+    float: right;
+    display: flex;
+    width: 29%;
+    height: 40px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    
+}
+
+input{
+    border: none;
+    outline: 1px solid rgb(71, 53, 53);
+    padding: 5px;
+}
+
+input:focus{
+    outline: 3px solid rgba(138, 156, 255, 0.486);
+}
+
+.radio{
+    outline: none;
 }
 
 * {
-    background-color: rgb(236, 236, 236);
+    background-color: rgba(245, 245, 245, 0.486);
+}
+
+.btn {
+    position: absolute;
+    left: 47%;
+    margin-top: 80px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+select{
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    border-radius: 5px;
 }
