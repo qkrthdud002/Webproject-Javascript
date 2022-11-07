@@ -28,7 +28,7 @@ function check(e) {
         return false;
     }
     if(id.value.length == 0) {
-        alert("거래서 ID를 입력하세요.");
+        alert("거래처 ID를 입력하세요.");
         return false;
     }
     if(password.value.length < 6) {
