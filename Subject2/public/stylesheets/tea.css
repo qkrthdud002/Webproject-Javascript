@@ -1,0 +1,41 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+li {
+    float: left;
+}
+
+#current {
+    background-color: rgba(236, 198, 128, 0.067);
+}
+
+li a {
+    margin-left: 130px;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+li a:hover:not(.active) {
+    border-radius: 10px;
+    background-color: rgba(236, 198, 128, 0.067);
+}
+
+.imgLogo {
+    margin: auto;
+    display: block;
+}
+
+hr {
+    border: 0px;
+    height: 2px;
+    background-color: black;
+}
