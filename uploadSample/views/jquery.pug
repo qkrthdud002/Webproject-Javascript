@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  h1 JQuery upload
+  form(id='form')
+    label(for='title') Title
+    input(type='text' name='title' id='title')
+    br
+    label(for='message') Message
+    input(type='text' name='message' id='message')
+    br
+    input(type='file' name='file' id='file')
+    br
+    button(type='button' id='upload') upload
+
+  div(id='result')
+    h3 Title
+    p(id='result_title')
+    h3 Message
+    p(id='result_message')
+    h3 원본 파일 이름
+    p(id='result_originalFileName')
+    img(id='result_img')
+
+  script.
+    $(()=>{
+      $('#upload').on('click', ()=>{
+        const form = $('#form')[0];
+        const data = new FormData(form);
+
+        $.ajax({
+          type:'post',
+          url:'/apiUpload',
+          data:data,
+          contentType : false,
+          processData : false
+        })
+        .done((data)=>{
+          alert('Uploaded');
+          console.log(data);
+          $('#result_title').text(data.title) 
+          $('#result_message').text(data.message)
+          $('#result_originalFileName').text(data.originalFileName)
+          $('#result_img').attr('src', data.fileUrl)
+        })
+        .fail((err)=>{
+          console.log(err);
+        });
+      });
+    });

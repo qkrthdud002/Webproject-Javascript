@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    // JQUERY
+    script(src='https://code.jquery.com/jquery-3.6.1.min.js'
+     integrity='sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=' 
+     crossorigin='anonymous')
+    // AXIOS
+    script(src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js')
+  body
+    ul
+      li
+        a(href='/form') Form upload
+      li 
+        a(href='/jquery') Jquery upload 
+      li 
+        a(href='/axios') Axios upload
+    block content

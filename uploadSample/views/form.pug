@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 Form upload
+  form(method='post' action='/formUpload' enctype='multipart/form-data')
+    label(for='title') Title
+    input(type='text' name='title' id='title')
+    br
+    label(for='message') Message
+    input(type='text' name='message' id='message')
+    br
+    input(type='file' name='file')
+    br
+    input(type='submit' value='upload')
+
+  if result 
+    h3 Title
+    p=result.title 
+    h3 Message
+    p=result.message 
+    h3 원본 파일 이름
+    p=result.originalFileName
+    img(src=result.fileUrl)

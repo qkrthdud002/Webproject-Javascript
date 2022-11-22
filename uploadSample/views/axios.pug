@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  h1 Axios upload
+  form(id='form')
+    label(for='title') Title
+    input(type='text' name='title' id='title')
+    br
+    label(for='message') Message
+    input(type='text' name='message' id='message')
+    br
+    input(type='file' name='file' id='file')
+    br
+    button(type='button' id='upload') upload
+
+  div(id='result')
+    h3 Title
+    p(id='result_title')
+    h3 Message
+    p(id='result_message')
+    h3 원본 파일 이름
+    p(id='result_originalFileName')
+    img(id='result_img')
+
+  script.
+    const button = document.getElementById('upload');
+    button.addEventListener('click', ()=>{
+      const form = document.getElementById('form');
+      const formData = new FormData(form);
+
+      axios.post('/apiUpload', formData, {
+        headers: {'Content-Type': 'multipart/form-data'}
+      })
+      .then((res)=>{
+        console.log(res.data);
+        document.getElementById('result_title').innerText = res.data.title
+        document.getElementById('result_message').innerText = res.data.message
+        document.getElementById('result_originalFileName').innerText = res.data.originalFileName
+        document.getElementById('result_img').setAttribute('src', res.data.fileUrl)
+      })
+      .catch((err)=>{});
+    });
+

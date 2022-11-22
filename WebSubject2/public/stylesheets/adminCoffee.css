@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    
+}
+
+.menu-container{
+    padding-left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+
+}
+
+.coffeeBox{
+    width: 18%;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.coffeeBox > img{
+    width: 100%;
+}
+
+
+li {
+    float: left;
+}
+
+#current {
+    background-color: rgba(236, 198, 128, 0.067);
+}
+
+.container{
+    display: flex;
+}
+
+main{
+    width: 80%;
+}
+
+aside{
+    width: 19%;
+    height: 50px;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.addBtn {
+    margin-top: 28px;
+    margin-left: 40%;
+}
+
+#addMenu {
+    text-decoration-line: none;
+}
+
+li a {
+    margin-left: 130px;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+li a:hover:not(.active) {
+    border-radius: 10px;
+    background-color: rgba(236, 198, 128, 0.067);
+}
+
+.imgLogo {
+    margin: auto;
+    display: block;
+}
+
+hr {
+    border: 0px;
+    height: 2px;
+    background-color: black;
+}
