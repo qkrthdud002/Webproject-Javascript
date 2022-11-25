@@ -36,6 +36,13 @@ ul {
     width: 18%;
     border: 1px solid black;
     margin-top: 20px;
+    text-align: center;
+}
+
+.won {
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .item > img{
@@ -43,15 +50,30 @@ ul {
 }
 
 .lbtn {
-    margin-top: 20px;
-    margin-left: 60px;  
-    width:300px;
+    margin-top: 400px;
+    margin-bottom: 10px;
+    margin-left: 10px;  
+    width:345px;
     height: 50px;
-    /* margin:20px; */
-    border:none;
-    background-color: #dcbead;
+    border: 1px solid black;
+    background-color: white;
     color: black;
+}
+
+.lbtn1 {
     text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+}
+
+.lbtn1:hover:before, .lbtn1:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+.lbtn:hover:before, .lbtn:hover:after{
+  width:100%;
+  transition:800ms ease all;
 }
 
 li {
@@ -74,6 +96,7 @@ main{
 
 aside{
     width: 19%;
+    /* height: 300px; */
     margin-top: 20px;
     border: 1px solid black;
 }
@@ -127,7 +150,7 @@ hr {
                 <div class="item" onclick="addMenu('<%= rows[i].title %>','<%=rows[i].content%>')">
                     <h2><%= rows[i].title %></h2>
                     <img src=<%= rows[i].fileUrl %> alt="img">
-                    <p><%= rows[i].content %>원</p>
+                    <p class="won"><%= rows[i].content %>원</p>
                 </div>
             <% } %>
 
@@ -152,7 +175,7 @@ hr {
                 <br>
                 <br>
                 <button class="lbtn">
-                    <a href="/">결제하기</a>
+                    <a class="lbtn1" href="/">결제하기</a>
                 </button>
             </div>
         </aside>

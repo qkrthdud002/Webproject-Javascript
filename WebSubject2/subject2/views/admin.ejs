@@ -28,7 +28,6 @@
             text-decoration: none;
             background:none;
             font-size: 18px;
-            color: #fff;
             margin-left: 60px;
             width:280px;
             height: 30px;
@@ -46,35 +45,51 @@
         }
 
         .addBtn {
-            background-color: white;
+            background-color: #f3f0ef;
             width: 140px;
             height: 50px;
+            border-color: white;
+            font-size: medium;
         }
 
-        .addBtn:hover {
-            background-color: #e6e0dc;
-            transition: 0.7s;
-        }
-
-        .homeBtn, .logout {
-            background-color: white;
+        .homeBtn {
+            background-color: #f3f0ef;
             width: 140px;
-            margin-left: 20px;
+            margin-left: 10px;
             height: 50px;
+            border-color: white;
+            margin-top: 20px;
         }
 
-        .homeBtn:hover, .logout:hover {
-            background-color: #e6e0dc;
-            transition: 0.7s;
+        .logoutBtn {
+            background-color: white;
+            width: 451px;
+            /* margin-left: 10px; */
+            height: 50px;
+            border-color: brown;
+            margin-top: 20px;
         }
 
         .homeBtn1 {
-            background-color: white;
+            background-color: #f3f0ef;
+            text-decoration-line: none;
+            font-size: medium;
         }
 
-        .homeBtn1:hover {
-            background-color: #e6e0dc;
-            transition: 0.7s;
+        .indexBtn {
+            background-color: #f3f0ef;
+            /* outline-color: white; */
+            width: 140px;
+            margin-left: 10px;
+            height: 50px;
+            border-color: white;
+            margin-top: 20px;
+        }
+
+        .indexBtn1 {
+            background-color: #f3f0ef;
+            text-decoration-line: none;
+            font-size: medium;
         }
 
         .button {
@@ -92,6 +107,22 @@
             margin-left: 300px;
             margin-top: 10px;
         }
+
+        .logout {
+            background-color: white;
+            text-decoration-line: none;
+            font-size: medium;
+            text-align: center;
+            /* margin: auto; */
+        }
+
+        input[type=file]::file-selector-button{
+            background-color: white;
+            width: 140px;
+            height: 30px;
+            border-color: brown;
+        }
+
     </style>
 
 </head>
@@ -107,6 +138,10 @@
             <div class="button">
                 <button class="addBtn" onclick="register()">등록하기</button>
 
+                <button class="indexBtn">
+                    <a class="indexBtn1" href="/index">조회하기</a>
+                </button>
+
                 <button class="homeBtn">
                     <a class="homeBtn1" href="/">Home</a>
                 </button>
@@ -118,7 +153,9 @@
                         <p userId="id"></p>
                         <a href="/auth/logout"></a>
                     </if>
+                    
                     <a class="logout" href="/">로그아웃</a>
+             
                 </button>
             </div>
         </div>
