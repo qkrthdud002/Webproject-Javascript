@@ -1,0 +1,160 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='/stylesheets/coffee.css' rel='stylesheet')
+
+style.
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    }
+
+    .menu-container{
+    padding-left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    }
+
+    .coffeeBox{
+    width: 18%;
+    border: 1px solid black;
+    margin-top: 20px;
+    }
+    
+    .coffeeBox > img{
+    width: 100%;
+    }
+
+    li {
+    float: left;
+    }
+
+    #current {
+    background-color: rgba(236, 198, 128, 0.067);
+    }
+
+    .container{
+    display: flex;
+    }
+
+    main{
+    width: 80%;
+    }
+
+    aside{
+    width: 19%;
+    margin-top: 20px;
+    border: 1px solid black;
+    }
+
+    li a {
+    margin-left: 130px;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    }
+
+    li a:hover:not(.active) {
+    border-radius: 10px;
+    background-color: rgba(236, 198, 128, 0.067);
+    }
+
+    .imgLogo {
+    margin: auto;
+    display: block;
+    }
+
+    hr {
+    border: 0px;
+    height: 2px;
+    background-color: black;
+    }
+
+title 커피
+img.imgLogo(src='img/logo.png')
+ul
+    li
+        a(href='/home') Home
+    li
+        a#current(href='/coffee') Coffee
+    li
+        a(href='/smoothie') Smoothie
+    li
+        a(href='/ade') Ade
+    li
+        a(href='/tea') Tea
+    li
+        a(href='/juice') Juice
+    li
+        a(href='/bubble') Bubble
+    li
+        a(href='/sideMenu') SideMenu
+hr
+.container
+    main
+        .menu-container
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+            .coffeeBox
+                img(src='http://www.cafebombom.co.kr/data/file/menu/thumb-53_copy_155_2041981148_PEpzJWTD_64fce0e2fea3d263353a7203965bd9220679a143_320x320.jpg')
+                
+    aside 장바구니

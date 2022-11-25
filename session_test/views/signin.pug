@@ -1,8 +1,28 @@
-extends layout
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/adminLogin.css')
+  body
+    block content
+      script.
+      const id=document.getElementById('id');
+      const pass=document.getElementById('pass');
+      if(id.value.length==0){
+        alert('아이디를 입력해주세요');
+        return false;
+      } else if(id.value != 'aaaa'){
+        alert("아이디가 일지하지 않습니다.");
+        return false;
+      } else if(pass.value != '1111') {
+        alert("비밀번호가 일치하지 않습니다.");
+        return false;
+      } else {
+        location.href='/auth/signin';
+        return true;
+      }
 
-block content
-  h1 로그인
-  form(action='/auth/signin' method='post')
-    input(type='text' name='userId')
-    input(type='password' name='password')
-    input(type='submit' value='확인')
+      form(action='/auth/signin' method='post')
+        input(type='text' name='userId')
+        input(type='password' name='password')
+        input(type='submit' value='확인')
